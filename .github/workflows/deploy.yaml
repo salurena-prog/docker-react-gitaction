@@ -8,8 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    
       - uses: actions/checkout@v2
+      - name: Test Internet Connection
+        run: curl -v https://github.com/einars/beanstalk-deploy
       
+      - uses: actions/checkout@v2
       # This is the corrected login step
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
