@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hi Steve and Mike! feature branch check 2
+          This is a gitaction pipeline
         </p>
         <a
           className="App-link"
